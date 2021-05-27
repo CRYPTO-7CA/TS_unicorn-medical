@@ -1,0 +1,16 @@
+<div class="container">
+  <p>
+    The topic in this container is about
+  </p>
+  <h3>{{topicName}}</h3>
+
+<ng-container *ngFor="let x of this.stackOverflowQuestions; let i = index">
+  <div *ngIf="i < this.questionsAmount">
+    <p>
+      <a href={{this.stackOverflowQuestions[i].link}}>{{this.stackOverflowQuestions[i].title}}</a>
+    </p>
+    <p *ngIf="i < this.weatherReports.length && i < this.weatherReportsAmount">Wetterbericht: Am {{this.weatherReports[i].Datum}} um {{this.weatherReports[i].Zeit}} war es {{this.weatherReports[i]["Temp. A."]}} Celsius</p>
+</div>
+</ng-container>
+
+</div>

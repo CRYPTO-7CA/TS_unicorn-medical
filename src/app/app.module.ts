@@ -9,20 +9,23 @@ import {AppRoutingModule} from "./app.routing.module";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {LayoutModule} from "./core/layout/layout.module";
 import { SearchComponent } from './search/search.component';
+import { ContainerComponent } from './container/container.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SearchComponent
+    SearchComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]
